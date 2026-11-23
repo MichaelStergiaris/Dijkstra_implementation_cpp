@@ -6,10 +6,10 @@ using namespace std;
 int main() {
     graph g;
     
-    //Ftiaxnoume enan grafo me 8 komvous
+    //Arxikopoioume enan grafo me 8 komvous
     init_graph(g, 8);
 
-    //Prosthetoume tis akmes me ta varh tous
+    //Prosthetoume tis akmes tou grafou kai ta varh tous
     add_edge(g, 0, 1, 4);
     add_edge(g, 0, 2, 2);
     add_edge(g, 1, 2, 5);
@@ -22,14 +22,14 @@ int main() {
     add_edge(g, 5, 7, 3);
     add_edge(g, 6, 7, 8);
 
-    //Dhmiourgia twn pinakwn gia ta apotelesmata
+    //Desmeuoume stathera pinakes gia tis apostaseis kai tous goneis
     int distance[MAX_NODES];
     int parent[MAX_NODES];
 
-    //Kaloume ton algorithmo me start_node ton komvo 0
+    //Ypologizoume tis syntomoteres apostaseis apo ton komvo 0
     dijkstra(g, 0, distance, parent);
 
-    //Tupwnoume ola ta data se pinaka
+    //Emfanizoume tis apostaseis kai ta syntomotera monopatia
     print_dijkstra_result(g, distance, parent, 0);
 
     return 0;
